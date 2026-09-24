@@ -1,0 +1,33 @@
+{
+  "name": "ROS 2 Humble Dev Environment",
+  "image": "althack/ros2:humble-full",
+  "runArgs": [
+    "--net=host",
+    "--ipc=host",
+    // 1. Включаем поддержку NVIDIA GPU внутри контейнера
+    "--gpus=all",
+    // 2. Пробрасываем переменные для XWayland и Wayland
+    "-e", "DISPLAY=${localEnv:DISPLAY}",
+    "-e", "WAYLAND_DISPLAY=${localEnv:WAYLAND_DISPLAY}",
+    "-e", "XDG_RUNTIME_DIR=/tmp",
+    "-e", "QT_QPA_PLATFORM=xcb", // Принудительно используем XWayland, так как Rviz/Gazebo стабильнее работают через него
+    // 3. Монтируем сокеты для XWayland и чистого Wayland
+    "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+    "-v", "${localEnv:XDG_RUNTIME_DIR}/${localEnv:WAYLAND_DISPLAY}:/tmp/${localEnv:WAYLAND_DISPLAY}:rw"
+  ],
+  // gzserver синхронно ходит в онлайн-базу моделей и в контейнере может виснуть на этом запросе.
+  // Пустое значение отключает сетевой поиск моделей (локальные из /usr/share/gazebo-11/models).
+  "containerEnv": {
+    "GAZEBO_MODEL_DATABASE_URI": ""
+  },
+  "postCreateCommand": "apt update && apt install -y ros-humble-urdf-tutorial ros-humble-joint-state-publisher-gui ros-humble-moveit ros-humble-moveit-planners-ompl ros-humble-ros2-control ros-humble-ros2-controllers ros-humble-gazebo-ros-pkgs ros-humble-gazebo-ros2-control && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc && echo '[ -f /workspaces/robot_arm_ws/install/setup.bash ] && source /workspaces/robot_arm_ws/install/setup.bash' >> ~/.bashrc",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "smriti.ros"
+      ]
+    }
+  }
+}

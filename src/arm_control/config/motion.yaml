@@ -1,0 +1,14 @@
+# Единственный источник настроек планирования для пакета arm_control.
+# Приложения (move_joints, move_tool_pose) читают их как параметры ROS,
+# в C++ эти значения не дублируются - см. docs/decisions/ADR-003-motion-settings.md
+/**:
+  ros__parameters:
+    # Группа планирования из SRDF (arm_description/../arm.srdf).
+    planning_group: arm
+    # Системы координат из URDF (arm_description/urdf/arm.urdf.xacro).
+    base_frame: base_link
+    tool_frame: tcp
+    # Именованная конфигурация из SRDF, в которую возвращаются демо-ноды.
+    home_pose_name: home
+    velocity_scaling: 0.5
+    acceleration_scaling: 0.5
