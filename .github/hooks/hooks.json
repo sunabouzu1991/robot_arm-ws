@@ -1,0 +1,35 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "node .github/hooks/check-xml-comments.cjs",
+        "timeout": 5
+      },
+      {
+        "type": "command",
+        "command": "node .github/hooks/check-ros1-terms.cjs",
+        "timeout": 5
+      },
+      {
+        "type": "command",
+        "command": "node .github/hooks/run-if-py-changed.cjs",
+        "timeout": 30
+      }
+    ],
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "node .github/hooks/block-generated-launch.cjs",
+        "timeout": 5
+      }
+    ],
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "node .github/hooks/inject-architecture.cjs",
+        "timeout": 5
+      }
+    ]
+  }
+}
