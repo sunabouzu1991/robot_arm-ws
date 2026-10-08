@@ -3,7 +3,7 @@ name: Domain Refactorer
 description: Рефакторит чистую логику в arm_control/domain. Не касается ROS-слоёв.
 user-invocable: true
 tools: ['read', 'search', 'edit']
-model: ['Claude Opus 4.5']
+model: ['DeepSeek Flash · Max (customendpoint)']
 ---
 
 # Роль

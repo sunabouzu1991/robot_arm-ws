@@ -2,7 +2,7 @@
 name: "ROS 2 & MoveIt 2 Robotics Expert"
 description: "Специалист по архитектуре и интеграции ROS 2, MoveIt 2 и Gazebo для 6-DOF манипуляторов."
 tools: ['read', 'search', 'edit', 'execute/runInTerminal', 'read/problems', 'execute/testFailure']
-model: ['Claude Opus 4.5', 'GPT-5.2']
+model: ['DeepSeek Flash · Max (customendpoint)', 'DeepSeek Flash · High (customendpoint)']
 handoffs:
   - label: Debug in Gazebo
     agent: Gazebo Debugger

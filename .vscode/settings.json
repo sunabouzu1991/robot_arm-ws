@@ -1,3 +1,25 @@
 {
-    "remote.autoForwardPortsFallback": 0
+    "remote.autoForwardPortsFallback": 0,
+    "aiNormalizer.modelOverrides": {
+        "deepseek-flash-low": {
+            "id": "deepseek-flash",
+            "name": "DeepSeek Flash · Low",
+            "reasoningEffort": "low"
+        },
+        "deepseek-flash-high": {
+            "id": "deepseek-flash",
+            "name": "DeepSeek Flash · High",
+            "reasoningEffort": "high"
+        },
+        "deepseek-flash-max": {
+            "id": "deepseek-flash",
+            "name": "DeepSeek Flash · Max",
+            "reasoningEffort": "max"
+        },
+        "deepseek-flash-off": {
+            "id": "deepseek-flash",
+            "name": "DeepSeek Flash · No Thinking",
+            "thinking": false
+        }
+    }
 }

@@ -3,7 +3,7 @@ name: Architecture Reviewer
 description: Проверяет изменения против ADR и слоистой архитектуры arm_control. Не редактирует файлы.
 user-invocable: true
 tools: ['read', 'search']
-model: ['Claude Opus 4.5', 'GPT-5.2']
+model: ['DeepSeek Flash · Max (customendpoint)', 'DeepSeek Flash · High (customendpoint)']
 ---
 
 # Роль

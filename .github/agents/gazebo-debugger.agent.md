@@ -3,7 +3,7 @@ name: Gazebo Debugger
 description: Диагностирует проблемы физики, часов симуляции и контроллеров в Gazebo.
 user-invocable: true
 tools: ['read', 'search', 'edit', 'execute/runInTerminal', 'read/problems', 'execute/testFailure']
-model: ['Claude Opus 4.5']
+model: ['DeepSeek Flash · High (customendpoint)', 'DeepSeek Flash · Low (customendpoint)']
 ---
 
 # Роль

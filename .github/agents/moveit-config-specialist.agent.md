@@ -3,7 +3,7 @@ name: MoveIt Config Specialist
 description: Эксперт по SRDF, kinematics, joint_limits и контроллерам в arm_moveit_config.
 user-invocable: true
 tools: ['read', 'search', 'edit', 'execute/runInTerminal']
-model: ['Claude Opus 4.5', 'GPT-5.2']
+model: ['DeepSeek Flash · Low (customendpoint)', 'DeepSeek Flash · High (customendpoint)']
 ---
 
 # Роль
