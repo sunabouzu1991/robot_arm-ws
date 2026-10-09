@@ -4,8 +4,8 @@
   <name>arm_description</name>
   <version>0.1.0</version>
   <description>
-    Описание 6-DOF манипулятора arm: xacro-модель, мир Gazebo, конфиг RViz
-    и launch-файлы визуализации и симуляции.
+    Компактная расчетная модель 6-DOF arm: целевой вылет 0.50 м и payload 0.5 кг;
+    xacro, мир Gazebo, RViz и launch-файлы. Массы являются проектными оценками.
   </description>
   <maintainer email="rahmgalievaset@gmail.com">aset</maintainer>
   <license>Apache-2.0</license>

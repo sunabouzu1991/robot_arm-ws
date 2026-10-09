@@ -10,5 +10,5 @@
     tool_frame: tcp
     # Именованная конфигурация из SRDF, в которую возвращаются демо-ноды.
     home_pose_name: home
-    velocity_scaling: 0.5
-    acceleration_scaling: 0.5
+    velocity_scaling: 0.1
+    acceleration_scaling: 0.1

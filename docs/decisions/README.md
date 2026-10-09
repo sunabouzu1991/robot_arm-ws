@@ -11,6 +11,7 @@
 | [ADR-004](ADR-004-single-ros2-control-source.md) | Один блок `ros2_control`, режим задаётся аргументом `use_gazebo` | accepted |
 | [ADR-005](ADR-005-gazebo-launch-pitfalls.md) | Очистка XML-комментариев и запрет онлайн-базы моделей Gazebo | accepted |
 | [ADR-006](ADR-006-simulation-clock.md) | `move_group` поверх Gazebo работает на часах симуляции | accepted |
+| [ADR-007](ADR-007-compact-prototype-envelope.md) | Компактная расчетная модель с reach 0.50 м и payload 0.5 кг | accepted |
 
 ## Формат
 

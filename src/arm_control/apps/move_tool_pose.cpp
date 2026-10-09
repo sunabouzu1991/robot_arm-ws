@@ -17,10 +17,11 @@ namespace
 {
 const std::string kNodeName = "move_tool_pose";
 
-// Целевая 6D поза инструмента, проверенная прямой кинематикой для конфигурации
-// [0.5, 1.05, -1.35, 0.4, 0.7, 0.3]: самоколлизий нет, все суставы в лимитах.
-const arm_control::domain::Vector3 kTargetPosition{0.1814, 0.1277, 0.9287};
-const arm_control::domain::Quaternion kTargetOrientation{-0.11421, 0.18423, 0.53463, 0.81681};
+// Целевая поза получена прямой кинематикой компактной модели для конфигурации
+// [0.3, 0.2, -0.3, 0.1, 0.2, 0.1], проверенной на самоколлизии.
+const arm_control::domain::Vector3 kTargetPosition{0.01864480, 0.00670176, 0.49665482};
+const arm_control::domain::Quaternion kTargetOrientation{
+  -0.01241484, 0.04892170, 0.24660596, 0.96780062};
 
 const arm_control::domain::Tolerances kTargetTolerances{0.005, 0.01};
 

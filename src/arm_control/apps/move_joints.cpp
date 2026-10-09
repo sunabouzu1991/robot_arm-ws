@@ -19,7 +19,7 @@ const std::string kNodeName = "move_joints";
 
 // Углы суставов (рад) в порядке модели робота: пояс, плечо, локоть, крен/тангаж/поворот кисти.
 // Конфигурация проверена на отсутствие самоколлизий и на попадание в лимиты URDF.
-const std::vector<double> kWorkJointPositions = {0.5, 0.5, -1.0, 0.3, 0.8, 0.4};
+const std::vector<double> kWorkJointPositions = {0.3, 0.2, -0.3, 0.1, 0.2, 0.1};
 
 std::vector<arm_control::domain::MotionTask> buildTasks(const arm_control::domain::MotionSettings& settings)
 {
